@@ -1,12 +1,56 @@
 <!DOCTYPE html>
-<html>
+<html lang="id">
 <head>
-<title>Page Title</title>
+<meta charset="UTF-8" />
+<title>Todo App - Apolline Bilqis Batseba</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="css/style.css" />
 </head>
-<body>
+<body class="min-h-screen bg-gradient-to-br from-rose-50 via-purple-50 to-indigo-100 flex items-center justify-center p-6">
+<div class="bg-white/90 backdrop-blur-xl shadow-2xl rounded-[2rem] w-full max-w-2xl p-8 border border-white/50">
 
-<h1>This is a Heading</h1>
-<p>This is a paragraph.</p>
 
+
+<div class="flex items-center justify-between mb-8">
+<div>
+<h1 class="text-4xl font-extrabold text-indigo-700 tracking-tight">🌸 My Daily Tasks</h1>
+<p class="text-sm text-gray-500">Apolline Bilqis Batseba Todo Task</p>
+</div>
+<div class="text-4xl">💎</div>
+</div>
+
+
+
+<div class="bg-gradient-to-r from-indigo-50 to-purple-50 border border-indigo-100 rounded-2xl p-5 mb-6 shadow-sm">
+<div class="flex flex-col sm:flex-row gap-4">
+<input id="todoInput" type="text" placeholder="Add something beautiful to do..." class="flex-1 px-5 py-3 border rounded-xl focus:ring-2 focus:ring-indigo-400 focus:outline-none" />
+<input id="dateInput" type="date" class="px-5 py-3 border rounded-xl focus:ring-2 focus:ring-indigo-400 focus:outline-none" />
+<button id="addBtn" class="bg-indigo-600 text-white px-7 py-3 rounded-xl hover:bg-indigo-700 transition shadow-lg">Add</button>
+</div>
+</div>
+
+
+
+<div class="flex flex-wrap justify-between items-center gap-3 mb-6">
+<div class="flex gap-3">
+<button data-filter="all" class="filter-btn px-5 py-2 rounded-xl bg-indigo-100 text-indigo-700 hover:bg-indigo-200 shadow-sm">All</button>
+<button data-filter="active" class="filter-btn px-5 py-2 rounded-xl bg-amber-100 text-amber-700 hover:bg-amber-200 shadow-sm">Active</button>
+<button data-filter="done" class="filter-btn px-5 py-2 rounded-xl bg-emerald-100 text-emerald-700 hover:bg-emerald-200 shadow-sm">Completed</button>
+</div>
+<button id="clearBtn" class="bg-red-500 text-white px-6 py-2 rounded-xl hover:bg-red-600 transition shadow">Clear All</button>
+</div>
+
+
+
+<ul id="todoList" class="space-y-5"></ul>
+
+
+
+<div class="text-center mt-10 text-xs text-gray-400">© 2026 Apolline Bilqis Batseba Todo App</div>
+</div>
+
+
+<script src="js/script.js"></script>
 </body>
 </html>
