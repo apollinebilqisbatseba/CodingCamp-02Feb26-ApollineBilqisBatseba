@@ -1,0 +1,51 @@
+/* Luxury visual enhancements */
+
+
+body {
+font-family: 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+
+.filter-btn {
+transition: all 0.25s ease;
+}
+
+
+.filter-btn:hover {
+transform: translateY(-2px) scale(1.03);
+}
+
+
+.todo-item {
+transition: all 0.3s ease;
+position: relative;
+}
+
+
+.todo-item:hover {
+box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+transform: translateY(-3px);
+}
+
+
+.todo-title-done {
+text-decoration: line-through;
+color: #9ca3af;
+}
+
+
+.todo-item::before {
+content: '';
+position: absolute;
+left: 0;
+top: 0;
+height: 100%;
+width: 6px;
+border-radius: 12px 0 0 12px;
+background: linear-gradient(to bottom, #6366f1, #8b5cf6);
+}
+
+
+.todo-item.done::before {
+background: linear-gradient(to bottom, #10b981, #34d399);
+}
